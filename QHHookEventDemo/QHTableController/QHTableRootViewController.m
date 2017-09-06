@@ -11,6 +11,8 @@
 #import "QHDetailRootViewController.h"
 #import "QHTableSubViewController.h"
 
+#import "QHHookUtil.h"
+
 @interface QHTableRootViewController ()
 
 @property (nonatomic, strong) NSMutableArray *arData;
@@ -21,6 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [QHHookUtil swizzleMethod];
     
     NSArray *array = @[@"QHTableSubViewController"];
     self.arData = [NSMutableArray arrayWithArray:array];

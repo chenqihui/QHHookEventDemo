@@ -7,6 +7,7 @@
 //
 
 #import "QHTableSubViewController.h"
+#import <objc/message.h>
 
 @interface QHTableSubViewController ()
 
@@ -32,24 +33,6 @@
 
 #pragma mark - Private
 
-- (void)p_viewPath:(id)sender {
-    id responder = sender;
-    UIView *currentView = responder;
-    NSMutableString *viewPath = [NSMutableString stringWithUTF8String:object_getClassName(responder)];
-    NSMutableString *indexPath = [NSMutableString new];
-    while (![responder isKindOfClass:[UIViewController class]] && ![responder isKindOfClass:[UIWindow class]]) {
-        responder = [responder nextResponder];
-        [viewPath insertString:[NSString stringWithFormat:@"%@/", [NSString stringWithUTF8String:object_getClassName(responder)]] atIndex:0];
-        
-        UIView *childView = currentView;
-        UIView *superView = currentView.superview;
-        NSInteger index = [superView.subviews indexOfObject:childView];
-        [indexPath insertString:[NSString stringWithFormat:@"/%ld", (long)index] atIndex:0];
-        currentView = superView;
-    }
-    [indexPath insertString:@"0" atIndex:0];
-    NSLog(@"%@ & %@", viewPath, indexPath);
-}
 
 #pragma mark - Public
 
@@ -66,7 +49,7 @@
 #pragma mark - Action
 
 - (IBAction)buttonAction:(id)sender {
-    [self p_viewPath:sender];
+    NSLog(@"%s", __FUNCTION__);
 }
 
 #pragma mark - Get

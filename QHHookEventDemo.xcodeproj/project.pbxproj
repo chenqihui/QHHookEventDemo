@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7410915B1F5FD0A1009996A1 /* QHHookUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 741091581F5FD0A1009996A1 /* QHHookUtil.m */; };
+		7410915C1F5FD0A1009996A1 /* QHViewPathUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7410915A1F5FD0A1009996A1 /* QHViewPathUtil.m */; };
 		7491B2951F5F01080056AF92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7491B2941F5F01080056AF92 /* main.m */; };
 		7491B2981F5F01080056AF92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7491B2971F5F01080056AF92 /* AppDelegate.m */; };
 		7491B29C1F5F01080056AF92 /* QHTableRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7491B29B1F5F01080056AF92 /* QHTableRootViewController.m */; };
@@ -20,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		741091571F5FD0A1009996A1 /* QHHookUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHHookUtil.h; sourceTree = "<group>"; };
+		741091581F5FD0A1009996A1 /* QHHookUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHHookUtil.m; sourceTree = "<group>"; };
+		741091591F5FD0A1009996A1 /* QHViewPathUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHViewPathUtil.h; sourceTree = "<group>"; };
+		7410915A1F5FD0A1009996A1 /* QHViewPathUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHViewPathUtil.m; sourceTree = "<group>"; };
 		7491B2901F5F01080056AF92 /* QHHookEventDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QHHookEventDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7491B2941F5F01080056AF92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7491B2961F5F01080056AF92 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,6 +56,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7410914F1F5FC68C009996A1 /* QHHookMan */ = {
+			isa = PBXGroup;
+			children = (
+				741091571F5FD0A1009996A1 /* QHHookUtil.h */,
+				741091581F5FD0A1009996A1 /* QHHookUtil.m */,
+				741091591F5FD0A1009996A1 /* QHViewPathUtil.h */,
+				7410915A1F5FD0A1009996A1 /* QHViewPathUtil.m */,
+			);
+			path = QHHookMan;
+			sourceTree = "<group>";
+		};
 		7491B2871F5F01080056AF92 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +86,7 @@
 		7491B2921F5F01080056AF92 /* QHHookEventDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7410914F1F5FC68C009996A1 /* QHHookMan */,
 				7491B2961F5F01080056AF92 /* AppDelegate.h */,
 				7491B2971F5F01080056AF92 /* AppDelegate.m */,
 				7491B2A61F5F01080056AF92 /* ViewController.h */,
@@ -188,6 +206,8 @@
 			files = (
 				7491B2A81F5F01080056AF92 /* ViewController.m in Sources */,
 				7491B2981F5F01080056AF92 /* AppDelegate.m in Sources */,
+				7410915C1F5FD0A1009996A1 /* QHViewPathUtil.m in Sources */,
+				7410915B1F5FD0A1009996A1 /* QHHookUtil.m in Sources */,
 				7491B29C1F5F01080056AF92 /* QHTableRootViewController.m in Sources */,
 				7491B29F1F5F01080056AF92 /* QHDetailRootViewController.m in Sources */,
 				7491B2951F5F01080056AF92 /* main.m in Sources */,
@@ -352,6 +372,7 @@
 				7491B2B61F5F01080056AF92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
