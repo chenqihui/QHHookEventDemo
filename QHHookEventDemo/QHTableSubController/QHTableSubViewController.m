@@ -7,7 +7,8 @@
 //
 
 #import "QHTableSubViewController.h"
-#import <objc/message.h>
+
+#import "QHHookUtil.h"
 
 @interface QHTableSubViewController ()
 
@@ -30,6 +31,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+//- (void)viewWillAppear:(BOOL)animated {
+//    
+//}
 
 #pragma mark - Private
 

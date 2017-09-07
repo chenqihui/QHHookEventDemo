@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "QHHookUtil.h"
+
 @interface AppDelegate ()
 
 @end

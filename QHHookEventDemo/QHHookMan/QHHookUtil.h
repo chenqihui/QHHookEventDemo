@@ -11,6 +11,6 @@
 
 @interface QHHookUtil : NSObject
 
-+ (void)swizzleMethod;
++ (void)swizzleTarget:(Class)class method:(SEL)originalSelector toMethod:(SEL)swizzledSelector;
 
 @end

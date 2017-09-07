@@ -24,11 +24,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [QHHookUtil swizzleMethod];
-    
     NSArray *array = @[@"QHTableSubViewController"];
     self.arData = [NSMutableArray arrayWithArray:array];
     
+//    [QHHookUtil swizzleMethod];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
