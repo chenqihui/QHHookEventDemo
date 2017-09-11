@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QHTableSubViewController">
             <connections>
+                <outlet property="tableView" destination="7aM-iW-hVe" id="exg-YP-UYp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -92,12 +93,35 @@
                                 <constraint firstItem="EOQ-8Z-ajv" firstAttribute="top" secondItem="AP2-Hk-TUe" secondAttribute="top" id="xQg-8Q-rsL"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1D1-EQ-mul">
+                            <rect key="frame" x="0.0" y="124" width="375" height="180"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7aM-iW-hVe">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="UNX-if-7Vi"/>
+                                    </connections>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="7aM-iW-hVe" firstAttribute="leading" secondItem="1D1-EQ-mul" secondAttribute="leading" id="9dr-xZ-JFX"/>
+                                <constraint firstAttribute="bottom" secondItem="7aM-iW-hVe" secondAttribute="bottom" id="CeT-9g-MCq"/>
+                                <constraint firstAttribute="trailing" secondItem="7aM-iW-hVe" secondAttribute="trailing" id="HMp-jD-exO"/>
+                                <constraint firstItem="7aM-iW-hVe" firstAttribute="top" secondItem="1D1-EQ-mul" secondAttribute="top" id="XmO-qZ-aSp"/>
+                                <constraint firstAttribute="height" constant="180" id="hCE-Bv-oY9"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <constraints>
                         <constraint firstItem="AP2-Hk-TUe" firstAttribute="top" secondItem="Pen-wW-e3I" secondAttribute="top" constant="64" id="MlX-4G-etI"/>
+                        <constraint firstAttribute="trailing" secondItem="1D1-EQ-mul" secondAttribute="trailing" id="Uni-Ll-aql"/>
                         <constraint firstAttribute="trailing" secondItem="AP2-Hk-TUe" secondAttribute="trailing" id="WyD-sA-t51"/>
                         <constraint firstAttribute="bottom" secondItem="AP2-Hk-TUe" secondAttribute="bottom" priority="999" id="XFT-kI-itd"/>
+                        <constraint firstItem="1D1-EQ-mul" firstAttribute="leading" secondItem="Pen-wW-e3I" secondAttribute="leading" id="rZ2-V5-bu5"/>
                         <constraint firstItem="AP2-Hk-TUe" firstAttribute="leading" secondItem="Pen-wW-e3I" secondAttribute="leading" id="sje-yq-Fj8"/>
+                        <constraint firstItem="1D1-EQ-mul" firstAttribute="top" secondItem="AP2-Hk-TUe" secondAttribute="bottom" id="wlA-3j-xIY"/>
                     </constraints>
                 </scrollView>
             </subviews>

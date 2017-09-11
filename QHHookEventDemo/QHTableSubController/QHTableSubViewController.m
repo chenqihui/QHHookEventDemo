@@ -10,7 +10,24 @@
 
 #import "QHHookUtil.h"
 
-@interface QHTableSubViewController ()
+@interface QHTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *label;
+
+@end
+
+@implementation QHTableViewCell
+
+- (IBAction)switchAction:(id)sender {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+@end
+
+@interface QHTableSubViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray *dataArray;
 
 @end
 
@@ -25,6 +42,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self p_setup];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,18 +50,38 @@
     // Dispose of any resources that can be recreated.
 }
 
-//- (void)viewWillAppear:(BOOL)animated {
-//    
-//}
-
 #pragma mark - Private
 
+- (void)p_setup {
+    self.dataArray = @[@"a", @"b"];
+    
+    UINib *nib = [UINib nibWithNibName:@"QHTableViewCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"QHTableViewCell"];
+}
 
 #pragma mark - Public
 
 
-#pragma mark - <#SystemDelegate#>
+#pragma mark - UITableViewDataSource
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    QHTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QHTableViewCell"];
+    if (!cell) {
+        cell = [[QHTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"QHTableViewCell"];
+    }
+    cell.label.text = self.dataArray[indexPath.row];
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 #pragma mark - <#CustomDelegate#>
 

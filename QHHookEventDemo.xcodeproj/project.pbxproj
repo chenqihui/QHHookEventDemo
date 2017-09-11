@@ -11,6 +11,7 @@
 		7410915C1F5FD0A1009996A1 /* QHViewPathUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7410915A1F5FD0A1009996A1 /* QHViewPathUtil.m */; };
 		742F54DF1F61A7D000CE97BE /* UIViewController+QHHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 742F54DE1F61A7D000CE97BE /* UIViewController+QHHook.m */; };
 		742F54E21F61B2E800CE97BE /* UIApplication+QHHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 742F54E11F61B2E800CE97BE /* UIApplication+QHHook.m */; };
+		7464CDCF1F66E9E900A40BAC /* QHTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7464CDCE1F66E9E900A40BAC /* QHTableViewCell.xib */; };
 		7491B2951F5F01080056AF92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7491B2941F5F01080056AF92 /* main.m */; };
 		7491B2981F5F01080056AF92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7491B2971F5F01080056AF92 /* AppDelegate.m */; };
 		7491B29C1F5F01080056AF92 /* QHTableRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7491B29B1F5F01080056AF92 /* QHTableRootViewController.m */; };
@@ -32,6 +33,8 @@
 		742F54DE1F61A7D000CE97BE /* UIViewController+QHHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+QHHook.m"; sourceTree = "<group>"; };
 		742F54E01F61B2E800CE97BE /* UIApplication+QHHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+QHHook.h"; sourceTree = "<group>"; };
 		742F54E11F61B2E800CE97BE /* UIApplication+QHHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+QHHook.m"; sourceTree = "<group>"; };
+		742F54E31F61B5E700CE97BE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		7464CDCE1F66E9E900A40BAC /* QHTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QHTableViewCell.xib; sourceTree = "<group>"; };
 		7491B2901F5F01080056AF92 /* QHHookEventDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QHHookEventDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7491B2941F5F01080056AF92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7491B2961F5F01080056AF92 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		7410914F1F5FC68C009996A1 /* QHHookMan */ = {
 			isa = PBXGroup;
 			children = (
+				742F54E31F61B5E700CE97BE /* README.md */,
 				742F54DC1F61A3EC00CE97BE /* QHHookCategory */,
 				741091571F5FD0A1009996A1 /* QHHookUtil.h */,
 				741091581F5FD0A1009996A1 /* QHHookUtil.m */,
@@ -145,6 +149,7 @@
 				7491B2A11F5F01080056AF92 /* QHTableSubViewController.h */,
 				7491B2A21F5F01080056AF92 /* QHTableSubViewController.m */,
 				7491B2A41F5F01080056AF92 /* QHTableSubViewController.xib */,
+				7464CDCE1F66E9E900A40BAC /* QHTableViewCell.xib */,
 			);
 			name = QHTableSubController;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				7491B2B01F5F01080056AF92 /* LaunchScreen.storyboard in Resources */,
 				7491B2AD1F5F01080056AF92 /* Assets.xcassets in Resources */,
 				7491B2AB1F5F01080056AF92 /* Main.storyboard in Resources */,
+				7464CDCF1F66E9E900A40BAC /* QHTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

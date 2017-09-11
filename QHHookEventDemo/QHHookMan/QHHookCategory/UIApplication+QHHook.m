@@ -23,12 +23,11 @@
 #pragma mark - Method Swizzling
 
 - (BOOL)swizzle_sendAction:(SEL)action to:(nullable id)target from:(nullable id)sender forEvent:(nullable UIEvent *)event {
-    id responder = ((UITouch *)[event allTouches].allObjects.lastObject).view;
-    if ([responder isKindOfClass:[UIButton class]]) {
-        UIButton *btn = (UIButton *)responder;
+    if ([sender isKindOfClass:[UIButton class]]) {
+        UIButton *btn = (UIButton *)sender;
         NSLog(@"%@", btn.titleLabel.text);
     }
-    [QHViewPathUtil viewPath:responder];
+    [QHViewPathUtil viewPath:sender];
     return [self swizzle_sendAction:action to:target from:sender forEvent:event];
 }
 
