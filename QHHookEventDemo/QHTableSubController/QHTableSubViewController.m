@@ -29,6 +29,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataArray;
 
+@property (weak, nonatomic) IBOutlet UILabel *tapGestureLabel;
+
 @end
 
 @implementation QHTableSubViewController
@@ -57,6 +59,11 @@
     
     UINib *nib = [UINib nibWithNibName:@"QHTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"QHTableViewCell"];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(manualAction)];
+    [self.tapGestureLabel addGestureRecognizer:tap];
+    
+    NSLog(@"p_setup");
 }
 
 #pragma mark - Public
@@ -92,6 +99,14 @@
 #pragma mark - Action
 
 - (IBAction)buttonAction:(id)sender {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+- (IBAction)xibAction:(id)sender {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+- (void)manualAction {
     NSLog(@"%s", __FUNCTION__);
 }
 

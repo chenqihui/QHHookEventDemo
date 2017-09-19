@@ -22,6 +22,7 @@
 		7491B2AB1F5F01080056AF92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7491B2A91F5F01080056AF92 /* Main.storyboard */; };
 		7491B2AD1F5F01080056AF92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7491B2AC1F5F01080056AF92 /* Assets.xcassets */; };
 		7491B2B01F5F01080056AF92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7491B2AE1F5F01080056AF92 /* LaunchScreen.storyboard */; };
+		74F8D97E1F70BAFB00504271 /* UIGestureRecognizer+QHHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F8D97D1F70BAFB00504271 /* UIGestureRecognizer+QHHook.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		7491B2AC1F5F01080056AF92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7491B2AF1F5F01080056AF92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7491B2B11F5F01080056AF92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74F8D97C1F70BAFB00504271 /* UIGestureRecognizer+QHHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+QHHook.h"; sourceTree = "<group>"; };
+		74F8D97D1F70BAFB00504271 /* UIGestureRecognizer+QHHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+QHHook.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				742F54DE1F61A7D000CE97BE /* UIViewController+QHHook.m */,
 				742F54E01F61B2E800CE97BE /* UIApplication+QHHook.h */,
 				742F54E11F61B2E800CE97BE /* UIApplication+QHHook.m */,
+				74F8D97C1F70BAFB00504271 /* UIGestureRecognizer+QHHook.h */,
+				74F8D97D1F70BAFB00504271 /* UIGestureRecognizer+QHHook.m */,
 			);
 			path = QHHookCategory;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74F8D97E1F70BAFB00504271 /* UIGestureRecognizer+QHHook.m in Sources */,
 				7491B2A81F5F01080056AF92 /* ViewController.m in Sources */,
 				7491B2981F5F01080056AF92 /* AppDelegate.m in Sources */,
 				742F54E21F61B2E800CE97BE /* UIApplication+QHHook.m in Sources */,

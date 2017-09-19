@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QHTableSubViewController">
             <connections>
                 <outlet property="tableView" destination="7aM-iW-hVe" id="exg-YP-UYp"/>
+                <outlet property="tapGestureLabel" destination="j4h-3X-G1a" id="2cc-ml-4ci"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -113,12 +114,48 @@
                                 <constraint firstAttribute="height" constant="180" id="hCE-Bv-oY9"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ao-TL-6g6">
+                            <rect key="frame" x="0.0" y="304" width="375" height="60"/>
+                            <subviews>
+                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xib添加手势" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw9-Xh-9Ph">
+                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="60"/>
+                                    <gestureRecognizers/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="vg7-O9-rCn" appends="YES" id="gXi-VS-QCM"/>
+                                    </connections>
+                                </label>
+                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手动添加手势" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4h-3X-G1a">
+                                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="60"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="j4h-3X-G1a" secondAttribute="bottom" id="7S5-FY-TFz"/>
+                                <constraint firstItem="vw9-Xh-9Ph" firstAttribute="width" secondItem="2Ao-TL-6g6" secondAttribute="width" multiplier="1:2" id="M9z-gF-OwA"/>
+                                <constraint firstItem="j4h-3X-G1a" firstAttribute="top" secondItem="2Ao-TL-6g6" secondAttribute="top" id="Mj9-xL-O2J"/>
+                                <constraint firstAttribute="bottom" secondItem="vw9-Xh-9Ph" secondAttribute="bottom" id="V9J-dx-dT8"/>
+                                <constraint firstItem="j4h-3X-G1a" firstAttribute="leading" secondItem="vw9-Xh-9Ph" secondAttribute="trailing" id="dq9-xp-IYO"/>
+                                <constraint firstItem="vw9-Xh-9Ph" firstAttribute="top" secondItem="2Ao-TL-6g6" secondAttribute="top" id="hgO-fC-oXe"/>
+                                <constraint firstAttribute="height" constant="60" id="jDk-2u-RXx"/>
+                                <constraint firstAttribute="trailing" secondItem="j4h-3X-G1a" secondAttribute="trailing" id="nhe-1e-BBV"/>
+                                <constraint firstItem="vw9-Xh-9Ph" firstAttribute="leading" secondItem="2Ao-TL-6g6" secondAttribute="leading" id="qrV-N7-Oqu"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <constraints>
                         <constraint firstItem="AP2-Hk-TUe" firstAttribute="top" secondItem="Pen-wW-e3I" secondAttribute="top" constant="64" id="MlX-4G-etI"/>
+                        <constraint firstAttribute="trailing" secondItem="2Ao-TL-6g6" secondAttribute="trailing" id="R26-X4-2cG"/>
+                        <constraint firstItem="2Ao-TL-6g6" firstAttribute="top" secondItem="1D1-EQ-mul" secondAttribute="bottom" id="Ucv-65-uJO"/>
                         <constraint firstAttribute="trailing" secondItem="1D1-EQ-mul" secondAttribute="trailing" id="Uni-Ll-aql"/>
                         <constraint firstAttribute="trailing" secondItem="AP2-Hk-TUe" secondAttribute="trailing" id="WyD-sA-t51"/>
                         <constraint firstAttribute="bottom" secondItem="AP2-Hk-TUe" secondAttribute="bottom" priority="999" id="XFT-kI-itd"/>
+                        <constraint firstItem="2Ao-TL-6g6" firstAttribute="leading" secondItem="Pen-wW-e3I" secondAttribute="leading" id="a6d-6l-RmS"/>
                         <constraint firstItem="1D1-EQ-mul" firstAttribute="leading" secondItem="Pen-wW-e3I" secondAttribute="leading" id="rZ2-V5-bu5"/>
                         <constraint firstItem="AP2-Hk-TUe" firstAttribute="leading" secondItem="Pen-wW-e3I" secondAttribute="leading" id="sje-yq-Fj8"/>
                         <constraint firstItem="1D1-EQ-mul" firstAttribute="top" secondItem="AP2-Hk-TUe" secondAttribute="bottom" id="wlA-3j-xIY"/>
@@ -140,5 +177,10 @@
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
+        <tapGestureRecognizer id="vg7-O9-rCn">
+            <connections>
+                <action selector="xibAction:" destination="-1" id="dCt-MO-xu4"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>
