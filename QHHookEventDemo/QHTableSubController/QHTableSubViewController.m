@@ -31,6 +31,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *tapGestureLabel;
 
+@property (weak, nonatomic) IBOutlet UIView *addButtonView;
+
 @end
 
 @implementation QHTableSubViewController
@@ -62,6 +64,22 @@
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(manualAction)];
     [self.tapGestureLabel addGestureRecognizer:tap];
+}
+
+- (void)p_addButtonWithTitle:(NSString *)title frame:(CGRect)frame tag:(NSInteger)tag {
+    id button = [self.addButtonView viewWithTag:tag];
+    if (button != nil) {
+        return;
+    }
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitle:title forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    btn.frame = frame;
+    btn.tag = tag;
+    [self.addButtonView addSubview:btn];
+    
+    [btn addTarget:self action:@selector(addButtonAction:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark - Public
@@ -106,6 +124,32 @@
 
 - (void)manualAction {
     NSLog(@"%s", __FUNCTION__);
+}
+
+/*
+ 同一父viewPath，动态添加显相同的控件，其index位置就不固定，针对这种情况就需要获取其他参考物，如获取它当前的frame.origin.x或者y，或者title，下面的情况两种都可以。这点需要圈点和埋点配合。
+ */
+- (IBAction)addButtonOneAction:(id)sender {
+    CGRect frame = CGRectMake(0, 0, self.addButtonView.frame.size.width/3, self.addButtonView.frame.size.height);
+    [self p_addButtonWithTitle:@"oneAction" frame:frame tag:1];
+}
+
+- (IBAction)addButtonTwoAction:(id)sender {
+    CGRect frame = CGRectMake(self.addButtonView.frame.size.width/3, 0, self.addButtonView.frame.size.width/3, self.addButtonView.frame.size.height);
+    [self p_addButtonWithTitle:@"twoAction" frame:frame tag:2];
+}
+
+- (IBAction)addButtonThreeAction:(id)sender {
+    CGRect frame = CGRectMake(self.addButtonView.frame.size.width/3*2, 0, self.addButtonView.frame.size.width/3, self.addButtonView.frame.size.height);
+    [self p_addButtonWithTitle:@"threeAction" frame:frame tag:3];
+}
+
+- (void)addButtonAction:(UIButton *)sender {
+    NSLog(@"%@", sender.titleLabel.text);
+}
+
+- (IBAction)cleanAction:(id)sender {
+    [self.addButtonView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
 }
 
 #pragma mark - Get

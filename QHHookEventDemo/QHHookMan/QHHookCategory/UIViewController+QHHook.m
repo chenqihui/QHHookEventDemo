@@ -24,12 +24,12 @@
 
 - (void)swizzle_viewWillAppear:(BOOL)animated {
     [self swizzle_viewWillAppear:animated];
-    NSLog(@"%s_%s", object_getClassName(self), __FUNCTION__);
+//    NSLog(@"%s_%s", object_getClassName(self), __FUNCTION__);
 }
 
 - (void)swizzle_viewDidDisappear:(BOOL)animated {
     [self swizzle_viewDidDisappear:animated];
-    NSLog(@"%s_%s", object_getClassName(self), __FUNCTION__);
+//    NSLog(@"%s_%s", object_getClassName(self), __FUNCTION__);
 }
 
 @end

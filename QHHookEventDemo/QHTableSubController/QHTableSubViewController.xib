@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QHTableSubViewController">
             <connections>
+                <outlet property="addButtonView" destination="oEy-O7-1Gq" id="p0M-Zj-piN"/>
                 <outlet property="tableView" destination="7aM-iW-hVe" id="exg-YP-UYp"/>
                 <outlet property="tapGestureLabel" destination="j4h-3X-G1a" id="2cc-ml-4ci"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -147,8 +148,83 @@
                                 <constraint firstItem="vw9-Xh-9Ph" firstAttribute="leading" secondItem="2Ao-TL-6g6" secondAttribute="leading" id="qrV-N7-Oqu"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1y-3y-xnv">
+                            <rect key="frame" x="0.0" y="364" width="375" height="120"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DII-Qd-UIX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZl-Aa-Mj6">
+                                            <rect key="frame" x="0.0" y="0.0" width="94" height="60"/>
+                                            <state key="normal" title="Button1"/>
+                                            <connections>
+                                                <action selector="addButtonOneAction:" destination="-1" eventType="touchUpInside" id="rq7-WH-e0N"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQg-a3-UYV">
+                                            <rect key="frame" x="187.5" y="0.0" width="94" height="60"/>
+                                            <state key="normal" title="Button3"/>
+                                            <connections>
+                                                <action selector="addButtonThreeAction:" destination="-1" eventType="touchUpInside" id="qvr-Bg-nlU"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAA-8w-OgK">
+                                            <rect key="frame" x="281.5" y="0.0" width="94" height="60"/>
+                                            <state key="normal" title="Clean"/>
+                                            <connections>
+                                                <action selector="cleanAction:" destination="-1" eventType="touchUpInside" id="zDg-2l-q9X"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Nt-bo-KvB">
+                                            <rect key="frame" x="94" y="0.0" width="93.5" height="60"/>
+                                            <state key="normal" title="Button2"/>
+                                            <connections>
+                                                <action selector="addButtonTwoAction:" destination="-1" eventType="touchUpInside" id="D3N-xp-7oP"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="mQg-a3-UYV" firstAttribute="leading" secondItem="9Nt-bo-KvB" secondAttribute="trailing" id="4fX-Db-b7A"/>
+                                        <constraint firstItem="QZl-Aa-Mj6" firstAttribute="top" secondItem="DII-Qd-UIX" secondAttribute="top" id="7De-xC-Xlh"/>
+                                        <constraint firstItem="9Nt-bo-KvB" firstAttribute="top" secondItem="DII-Qd-UIX" secondAttribute="top" id="Clr-kp-dMv"/>
+                                        <constraint firstItem="uAA-8w-OgK" firstAttribute="top" secondItem="DII-Qd-UIX" secondAttribute="top" id="FLj-Jb-7c5"/>
+                                        <constraint firstItem="mQg-a3-UYV" firstAttribute="width" secondItem="QZl-Aa-Mj6" secondAttribute="width" id="N7l-E4-0wq"/>
+                                        <constraint firstItem="9Nt-bo-KvB" firstAttribute="width" secondItem="QZl-Aa-Mj6" secondAttribute="width" id="P7L-9e-5C0"/>
+                                        <constraint firstItem="mQg-a3-UYV" firstAttribute="top" secondItem="DII-Qd-UIX" secondAttribute="top" id="RdZ-fw-FET"/>
+                                        <constraint firstItem="uAA-8w-OgK" firstAttribute="width" secondItem="QZl-Aa-Mj6" secondAttribute="width" id="SgD-Oy-URh"/>
+                                        <constraint firstItem="9Nt-bo-KvB" firstAttribute="leading" secondItem="QZl-Aa-Mj6" secondAttribute="trailing" id="TI7-of-lmv"/>
+                                        <constraint firstItem="QZl-Aa-Mj6" firstAttribute="width" secondItem="DII-Qd-UIX" secondAttribute="width" multiplier="1:4" id="Thb-GM-1zX"/>
+                                        <constraint firstAttribute="bottom" secondItem="QZl-Aa-Mj6" secondAttribute="bottom" id="cK1-KV-3lF"/>
+                                        <constraint firstAttribute="bottom" secondItem="mQg-a3-UYV" secondAttribute="bottom" id="eJl-Cm-g7Q"/>
+                                        <constraint firstAttribute="bottom" secondItem="9Nt-bo-KvB" secondAttribute="bottom" id="gf2-Qr-k7F"/>
+                                        <constraint firstItem="uAA-8w-OgK" firstAttribute="leading" secondItem="mQg-a3-UYV" secondAttribute="trailing" id="hIv-yu-7eK"/>
+                                        <constraint firstItem="QZl-Aa-Mj6" firstAttribute="leading" secondItem="DII-Qd-UIX" secondAttribute="leading" id="lqN-fZ-Nh7"/>
+                                        <constraint firstAttribute="height" constant="60" id="ney-XF-a3b"/>
+                                        <constraint firstAttribute="bottom" secondItem="uAA-8w-OgK" secondAttribute="bottom" id="qUW-0I-d4b"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEy-O7-1Gq">
+                                    <rect key="frame" x="0.0" y="60" width="375" height="60"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="oEy-O7-1Gq" secondAttribute="trailing" id="0OC-by-AFB"/>
+                                <constraint firstItem="DII-Qd-UIX" firstAttribute="top" secondItem="Z1y-3y-xnv" secondAttribute="top" id="3PP-cJ-yGr"/>
+                                <constraint firstAttribute="bottom" secondItem="oEy-O7-1Gq" secondAttribute="bottom" id="7R0-HU-qfq"/>
+                                <constraint firstItem="DII-Qd-UIX" firstAttribute="leading" secondItem="Z1y-3y-xnv" secondAttribute="leading" id="Ghb-K7-fjc"/>
+                                <constraint firstAttribute="trailing" secondItem="DII-Qd-UIX" secondAttribute="trailing" id="ITu-ts-rPu"/>
+                                <constraint firstAttribute="height" constant="120" id="OeK-m4-v42"/>
+                                <constraint firstItem="oEy-O7-1Gq" firstAttribute="leading" secondItem="Z1y-3y-xnv" secondAttribute="leading" id="Syo-kS-zjR"/>
+                                <constraint firstItem="oEy-O7-1Gq" firstAttribute="top" secondItem="DII-Qd-UIX" secondAttribute="bottom" id="yby-wP-NfG"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Z1y-3y-xnv" secondAttribute="trailing" id="Afk-oD-BgG"/>
+                        <constraint firstItem="Z1y-3y-xnv" firstAttribute="leading" secondItem="Pen-wW-e3I" secondAttribute="leading" id="Lvy-Wo-GWh"/>
                         <constraint firstItem="AP2-Hk-TUe" firstAttribute="top" secondItem="Pen-wW-e3I" secondAttribute="top" constant="64" id="MlX-4G-etI"/>
                         <constraint firstAttribute="trailing" secondItem="2Ao-TL-6g6" secondAttribute="trailing" id="R26-X4-2cG"/>
                         <constraint firstItem="2Ao-TL-6g6" firstAttribute="top" secondItem="1D1-EQ-mul" secondAttribute="bottom" id="Ucv-65-uJO"/>
@@ -158,6 +234,7 @@
                         <constraint firstItem="2Ao-TL-6g6" firstAttribute="leading" secondItem="Pen-wW-e3I" secondAttribute="leading" id="a6d-6l-RmS"/>
                         <constraint firstItem="1D1-EQ-mul" firstAttribute="leading" secondItem="Pen-wW-e3I" secondAttribute="leading" id="rZ2-V5-bu5"/>
                         <constraint firstItem="AP2-Hk-TUe" firstAttribute="leading" secondItem="Pen-wW-e3I" secondAttribute="leading" id="sje-yq-Fj8"/>
+                        <constraint firstItem="Z1y-3y-xnv" firstAttribute="top" secondItem="2Ao-TL-6g6" secondAttribute="bottom" id="ssV-OK-YPF"/>
                         <constraint firstItem="1D1-EQ-mul" firstAttribute="top" secondItem="AP2-Hk-TUe" secondAttribute="bottom" id="wlA-3j-xIY"/>
                     </constraints>
                 </scrollView>
