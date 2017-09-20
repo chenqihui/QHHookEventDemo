@@ -62,8 +62,6 @@
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(manualAction)];
     [self.tapGestureLabel addGestureRecognizer:tap];
-    
-    NSLog(@"p_setup");
 }
 
 #pragma mark - Public

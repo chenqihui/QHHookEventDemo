@@ -32,11 +32,26 @@
         responder = [responder nextResponder];
         [viewPath insertString:[NSString stringWithFormat:@"%@/", [NSString stringWithUTF8String:object_getClassName(responder)]] atIndex:0];
         
-        UIView *childView = currentView;
         UIView *superView = currentView.superview;
-        NSInteger index = [superView.subviews indexOfObject:childView];
-        [indexPath insertString:[NSString stringWithFormat:@"/%ld", (long)index] atIndex:0];
-        currentView = superView;
+        if ([currentView isKindOfClass:[UITableViewCell class]] == YES) {
+            while ([superView isKindOfClass:[UITableView class]] == NO && superView != nil) {
+                superView = superView.superview;
+            }
+            UITableView *tableView = (UITableView *)superView;
+            NSIndexPath *cellIndexPath = [tableView indexPathForCell:(UITableViewCell *)currentView];
+            [indexPath insertString:[NSString stringWithFormat:@"/%ld:%ld", (long)cellIndexPath.section, (long)cellIndexPath.row] atIndex:0];
+        }
+        else if ([currentView isKindOfClass:[UICollectionViewCell class]] == YES) {
+            UICollectionView *collectionView = (UICollectionView *)superView;
+            NSIndexPath *cellIndexPath = [collectionView indexPathForCell:(UICollectionViewCell *)currentView];
+            [indexPath insertString:[NSString stringWithFormat:@"/%ld:%ld", (long)cellIndexPath.section, (long)cellIndexPath.row] atIndex:0];
+        }
+        else {
+            NSInteger index = [superView.subviews indexOfObject:currentView];
+            [indexPath insertString:[NSString stringWithFormat:@"/%ld", (long)index] atIndex:0];
+        }
+        
+        currentView = currentView.superview;
     }
     [indexPath insertString:@"0" atIndex:0];
     NSLog(@"%@ & %@", viewPath, indexPath);

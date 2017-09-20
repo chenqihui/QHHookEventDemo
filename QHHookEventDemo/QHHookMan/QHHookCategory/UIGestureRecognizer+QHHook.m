@@ -37,6 +37,9 @@ static NSString *hasParamKey = @"bHasParam";
 #pragma mark - Method Swizzling
 
 - (instancetype)swizzle_initWithTarget:(nullable id)target action:(nullable SEL)action {
+    if (target == nil) {
+        return [self swizzle_initWithTarget:target action:action];
+    }
     //添加类似原来sel的新sel，添加成功后，替换原来的sel（即action）
     SEL swizzledSEL = NSSelectorFromString([NSString stringWithFormat:@"qhReplace_%@", NSStringFromSelector(action)]);
     BOOL didAddMethod = class_addMethod([target class], swizzledSEL, (IMP)replace_gestureAction, "v@:@");
@@ -72,7 +75,7 @@ void replace_gestureAction(id self, SEL _cmd,id sender) {
     if (range.location != NSNotFound && range.location == 0) {
         //按协议的，将新sel还原回原来的sel
         NSString *originalSelString = [selString substringFromIndex:range.length];
-        if ([sender bHasParam] == YES) {
+        if ([sender bHasParam] == YES && [originalSelString rangeOfString:@":"].location == NSNotFound) {
             originalSelString = [NSString stringWithFormat:@"%@:", originalSelString];
         }
         SEL originalSelector = NSSelectorFromString(originalSelString);
