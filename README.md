@@ -22,3 +22,4 @@
 * [漫谈iOS AOP编程之路](http://www.jianshu.com/p/addd4eac54ed)  
 * [Method Swizzling和AOP(面向切面编程)实践](http://www.cocoachina.com/ios/20150120/10959.html)  
 * [Objective-C Runtime](http://www.cocoachina.com/ios/20150120/10958.html)  
+* [iOS 札记1：Method Swizzling小记](http://www.jianshu.com/p/5f2e38a40aa4)
