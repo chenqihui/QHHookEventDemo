@@ -23,6 +23,10 @@
 		7491B2AB1F5F01080056AF92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7491B2A91F5F01080056AF92 /* Main.storyboard */; };
 		7491B2AD1F5F01080056AF92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7491B2AC1F5F01080056AF92 /* Assets.xcassets */; };
 		7491B2B01F5F01080056AF92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7491B2AE1F5F01080056AF92 /* LaunchScreen.storyboard */; };
+		74A0E2B71F833341001FB450 /* QHSuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A0E2B51F833341001FB450 /* QHSuperViewController.m */; };
+		74A0E2B81F833341001FB450 /* QHSuperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74A0E2B61F833341001FB450 /* QHSuperViewController.xib */; };
+		74A0E2BC1F833358001FB450 /* QHSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A0E2BA1F833358001FB450 /* QHSubViewController.m */; };
+		74A0E2BD1F833358001FB450 /* QHSubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74A0E2BB1F833358001FB450 /* QHSubViewController.xib */; };
 		74F8D97E1F70BAFB00504271 /* UIGestureRecognizer+QHHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F8D97D1F70BAFB00504271 /* UIGestureRecognizer+QHHook.m */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +60,12 @@
 		7491B2AC1F5F01080056AF92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7491B2AF1F5F01080056AF92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7491B2B11F5F01080056AF92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74A0E2B41F833341001FB450 /* QHSuperViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHSuperViewController.h; sourceTree = "<group>"; };
+		74A0E2B51F833341001FB450 /* QHSuperViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHSuperViewController.m; sourceTree = "<group>"; };
+		74A0E2B61F833341001FB450 /* QHSuperViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QHSuperViewController.xib; sourceTree = "<group>"; };
+		74A0E2B91F833358001FB450 /* QHSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHSubViewController.h; sourceTree = "<group>"; };
+		74A0E2BA1F833358001FB450 /* QHSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHSubViewController.m; sourceTree = "<group>"; };
+		74A0E2BB1F833358001FB450 /* QHSubViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QHSubViewController.xib; sourceTree = "<group>"; };
 		74F8D97C1F70BAFB00504271 /* UIGestureRecognizer+QHHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+QHHook.h"; sourceTree = "<group>"; };
 		74F8D97D1F70BAFB00504271 /* UIGestureRecognizer+QHHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+QHHook.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +139,7 @@
 				7491B2B11F5F01080056AF92 /* Info.plist */,
 				7491B2991F5F01080056AF92 /* QHTableController */,
 				7491B2A01F5F01080056AF92 /* QHTableSubController */,
+				74A0E2B31F8332E4001FB450 /* QHSubViewController */,
 				7491B2931F5F01080056AF92 /* Supporting Files */,
 			);
 			path = QHHookEventDemo;
@@ -162,6 +173,19 @@
 				7464CDCE1F66E9E900A40BAC /* QHTableViewCell.xib */,
 			);
 			name = QHTableSubController;
+			sourceTree = "<group>";
+		};
+		74A0E2B31F8332E4001FB450 /* QHSubViewController */ = {
+			isa = PBXGroup;
+			children = (
+				74A0E2B41F833341001FB450 /* QHSuperViewController.h */,
+				74A0E2B51F833341001FB450 /* QHSuperViewController.m */,
+				74A0E2B61F833341001FB450 /* QHSuperViewController.xib */,
+				74A0E2B91F833358001FB450 /* QHSubViewController.h */,
+				74A0E2BA1F833358001FB450 /* QHSubViewController.m */,
+				74A0E2BB1F833358001FB450 /* QHSubViewController.xib */,
+			);
+			path = QHSubViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,10 +248,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7491B2A51F5F01080056AF92 /* QHTableSubViewController.xib in Resources */,
+				74A0E2B81F833341001FB450 /* QHSuperViewController.xib in Resources */,
 				7491B2B01F5F01080056AF92 /* LaunchScreen.storyboard in Resources */,
 				7491B2AD1F5F01080056AF92 /* Assets.xcassets in Resources */,
 				7491B2AB1F5F01080056AF92 /* Main.storyboard in Resources */,
 				7464CDCF1F66E9E900A40BAC /* QHTableViewCell.xib in Resources */,
+				74A0E2BD1F833358001FB450 /* QHSubViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,11 +268,13 @@
 				7491B2A81F5F01080056AF92 /* ViewController.m in Sources */,
 				7491B2981F5F01080056AF92 /* AppDelegate.m in Sources */,
 				742F54E21F61B2E800CE97BE /* UIApplication+QHHook.m in Sources */,
+				74A0E2BC1F833358001FB450 /* QHSubViewController.m in Sources */,
 				7410915C1F5FD0A1009996A1 /* QHViewPathUtil.m in Sources */,
 				7410915B1F5FD0A1009996A1 /* QHHookUtil.m in Sources */,
 				7491B29C1F5F01080056AF92 /* QHTableRootViewController.m in Sources */,
 				7491B29F1F5F01080056AF92 /* QHDetailRootViewController.m in Sources */,
 				742F54DF1F61A7D000CE97BE /* UIViewController+QHHook.m in Sources */,
+				74A0E2B71F833341001FB450 /* QHSuperViewController.m in Sources */,
 				740745A81F7F8ED500E51B53 /* UITableView+QHHook.m in Sources */,
 				7491B2951F5F01080056AF92 /* main.m in Sources */,
 				7491B2A31F5F01080056AF92 /* QHTableSubViewController.m in Sources */,

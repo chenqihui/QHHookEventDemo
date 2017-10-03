@@ -45,6 +45,7 @@
     
     //如果class没有实现originalSelector，则采用replaceMethod
     if (didAddMethod) {
+        //这里采用二次replaceMethod，对于新加的originalSelector与swizzled交换后，再swizzled交换originalMethod，等于，调用时候，先调了新增的，调度交换的swizzled（即不会调新增的），而swizzled调度后，再调度objc_msgSend，此时会调父类实现的Method。
         class_replaceMethod(class,
                             originalSelector,
                             method_getImplementation(swizzledMethod),

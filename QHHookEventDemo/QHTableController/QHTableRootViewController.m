@@ -8,10 +8,11 @@
 
 #import "QHTableRootViewController.h"
 
+#import "QHHookUtil.h"
+
 #import "QHDetailRootViewController.h"
 #import "QHTableSubViewController.h"
-
-#import "QHHookUtil.h"
+#import "QHSubViewController.h"
 
 @interface QHTableRootViewController ()
 
@@ -24,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *array = @[@"QHTableSubViewController"];
+    NSArray *array = @[@"QHTableSubViewController", @"QHSubViewController"];
     self.arData = [NSMutableArray arrayWithArray:array];
     
 //    [QHHookUtil swizzleMethod];
@@ -67,6 +68,9 @@
     UIViewController *subVC = nil;
     if ([title isEqualToString:@"QHTableSubViewController"]) {
         subVC = [[QHTableSubViewController alloc] init];
+    }
+    if ([title isEqualToString:@"QHSubViewController"]) {
+        subVC = [[QHSubViewController alloc] init];
     }
     else {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

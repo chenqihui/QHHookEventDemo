@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@interface QHTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *label;
+
+@end
+
 @interface QHTableSubViewController : UIViewController
 
 @end

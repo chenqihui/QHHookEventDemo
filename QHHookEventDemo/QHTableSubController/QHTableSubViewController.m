@@ -10,12 +10,6 @@
 
 #import "QHHookUtil.h"
 
-@interface QHTableViewCell : UITableViewCell
-
-@property (weak, nonatomic) IBOutlet UILabel *label;
-
-@end
-
 @implementation QHTableViewCell
 
 - (IBAction)switchAction:(id)sender {
